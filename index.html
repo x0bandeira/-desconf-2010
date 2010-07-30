@@ -12,7 +12,10 @@ a:link, a:visited { color: #b9ff33; }
 strong { font-size: 110%; }
 #wrapper { width: 500px; margin: 0 auto; }
 #info { border-bottom: 4px solid #a7d74c; border-top: 4px solid #a7d74c; padding: 10px; margin: 20px 0 10px 0; }
-.callout { background-color: #a7d74c; display: block; padding: 10px 0; margin: 20px 0 10px 0; }
+.callout { background-color: #a7d74c; display: block; padding: 10px 0; margin: 20px 0 10px 0; text-decoration: none;  }
+.callout:link, .callout:visited { color: #fff; }
+.callout:hover { font-size: 105%; }
+
 #social { margin: 0 0 20px 0; }
 </style>
 
@@ -40,7 +43,7 @@ strong { font-size: 110%; }
         </section>
 
         <section id="footer">
-            <strong class="callout">Estamos precisando de apoiadores!</strong>
+            <a href="mailto:contato@desconf.org" class="callout">Estamos precisando de apoiadores!</a>
             
             <div id="social">
             <a class="retweet" href="http://desconf.org" title="Desconferência Rápida? Eu apoio! #desconf">#desconf</a> |
