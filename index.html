@@ -13,7 +13,9 @@ a:link, a:visited { color: #b9ff33; }
 strong { font-size: 110%; }
 #wrapper { width: 500px; margin: 0 auto; }
 #info { border-bottom: 4px solid #a7d74c; border-top: 4px solid #a7d74c; padding: 10px; margin: 0 0 10px 0; }
-#info a { font-size: 60%; }
+#info strong a { color: #fff; text-decoration: none; border-bottom: 1px dotted #fff; }
+#info strong a:hover { color: #b9ff33; border-color: #b9ff33; }
+#info #learnmore { font-size: 60%; }
 .callout { background-color: #a7d74c; display: block; padding: 10px 0; margin: 20px 0 0 0; text-decoration: none; font-size: 100%;  }
 .callout-info { background:none repeat scroll 0 0 #000000; font-size:70%; opacity:0.8; padding:10px 20px 20px 20px; text-align:left; overflow: hidden; top: 0; left: 0; margin: 0 0 20px 0; }
 #social { margin: 0 0 0 0; }
@@ -37,10 +39,10 @@ section { clear: both; float: left; }
             <div id="info">
                 Um dia de final de semana, algumas horas, só de 
                 <strong>Lightning Talks</strong> e 
-                <strong>Dojos</strong>,
+                <strong><a href="http://blog.desconf.org/dojo-o-que-porque-e-como">Dojos</a></strong>,
                 com umas 50 pessoas, todos auto-organizados, participando com o intuito
                 de dividir conhecimento e compartilhar experiências.
-                <a href="http://blog.desconf.org/o-que-e-a-desconf">SAIBA MAIS!</a>
+                <a id="learnmore" href="http://blog.desconf.org/o-que-e-a-desconf">SAIBA MAIS!</a>
             </div>
             <div id="social">
                 <small>Ajude a <a href="http://twitter.com/desconf"><small>@</small>desconf</a> acontecer divulgando o evento no Twitter!</small> <br />
