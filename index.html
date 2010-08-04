@@ -22,6 +22,10 @@ strong { font-size: 110%; }
 section { clear: both; float: left; }
 #teaser { font-size: 80%; line-height: 125%; text-align: left; padding: 28px 0 0 0; }
 #logo { float: left; margin-right: 20px } 
+
+a#retweet { font: 11px Arial; color: #333; text-decoration: none; border: 0px; }
+a#retweet span { color: #FFF; background: #6C83B9; margin-left: 2px; border: 1px solid #3A589B; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; padding: 3px 3px 2px 3px; }
+a#retweet strong { font-size: 11px; font-weight: bold; }
 </style>
 
 </head>
@@ -46,7 +50,7 @@ section { clear: both; float: left; }
             </div>
             <div id="social">
                 <small>Ajude a <a href="http://twitter.com/desconf"><small>@</small>desconf</a> acontecer divulgando o evento no Twitter!</small> <br />
-                <a class="retweet" href="http://desconf.org" title="Desconferência Rápida? Eu apoio! #desconf">#desconf</a> |
+                <a id="retweet" target="_blank" href="http://twitter.com/home?status=Desconfer%C3%AAncia%20R%C3%A1pida%3F%20Eu%20apoio!%20%23desconf%20http%3A%2F%2Fbit.ly%2Fap86Mw" title="Desconferência Rápida? Eu apoio! #desconf"><span>Retweet #desconf!</span></a> |
                 <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdesconf.org&amp;layout=button_count&amp;show_faces=false&amp;width=80&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=25" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:25px; margin: 0 0 -11px 0;" allowTransparency="true"></iframe>
             </div>
 
@@ -72,7 +76,41 @@ section { clear: both; float: left; }
             </small>
         </section>
     </div>
-<script type="text/javascript" src="retweet.js"></script>
+
+<script type="text/javascript">
+var bitlyHash = 'ap86Mw'
+    ,bitlyScript = 'http://bit.ly/javascript-api.js?version=latest&login=rafb3&apiKey=R_4b6eb68bf293cf1c226c74b69f83a80a'
+    ,head = document.getElementsByTagName('head')[0] || document.documentElement
+    ,script = document.createElement('script')
+    ,check, clicks, counter
+    ,button = document.getElementById('retweet');
+
+    script.src = bitlyScript;
+    script.charSet = 'utf-8';
+    head.appendChild( script );
+
+    check = setInterval(startBitly, 10);
+
+    function startBitly() { 
+        if (typeof BitlyCB !== 'undefined') { 
+            clearInterval(check); 
+            loadBitlyStats(); 
+        }
+    }
+    
+    function loadBitlyStats() { 
+        BitlyCB.statsResponse = showBitlyStats;
+        BitlyClient.stats(bitlyHash, 'BitlyCB.statsResponse');
+    }
+    
+    function showBitlyStats(data) {
+        clicks = data.results.clicks; 
+        counter = document.createElement('strong');
+		counter.appendChild(document.createTextNode('  ' + clicks));
+	    button.insertBefore(counter, button.firstChild.nextSibling);
+	}
+</script>
+
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-2813289-8']);
