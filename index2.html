@@ -31,9 +31,11 @@ a#retweet span { color: #FFF; background: #A7D74C; margin-left: 2px; border: 1px
 a#retweet strong { font-size: 11px; font-weight: bold; }
 
 #content { margin: 20px 0 0 0; }
-#content .bucket { background: white; color: #494A46; padding: 10px; font-size: 60%; -moz-border-radius: 3px; -moz-box-shadow: 2px -1px 4px #494A46; -webkit-box-shadow: 2px -1px 4px #494A46; height: 200px; }
+#content .bucket { background: white; color: #494A46; padding: 10px; font-size: 60%; -moz-box-shadow: 2px -1px 4px #494A46; -webkit-box-shadow: 2px -1px 4px #494A46; height: 200px; }
 #content .bucket a { color: #A6D74C; }
 #content h3 { text-shadow: 2px -1px 2px #494A46; }
+
+.bucket { -webkit-border-radius: 3px; -moz-border-radius: 3px; }
 
 h3 { text-transform: uppercase; font-size: 100%; padding: 0 10px; margin: 0 0 -5px 0; }
 #extra { font-size: 60%; padding: 20px 10px 0 10px; }
@@ -45,7 +47,7 @@ h3 { text-transform: uppercase; font-size: 100%; padding: 0 10px; margin: 0 0 -5
 
 <body>
     <div id="wrapper" class="container_12">
-        <section id="header">
+        <section id="header" class="grid_12">
             <div class="grid_8 alpha text">
                 <div id="teaser">
                 Empreendedorismo, Web, Design, Lean, Usabilidade, Carreira,
@@ -71,7 +73,7 @@ h3 { text-transform: uppercase; font-size: 100%; padding: 0 10px; margin: 0 0 -5
             </div>
         </section>
 
-        <section id="content">
+        <section id="content" class="grid_12">
             <div class="grid_4 alpha">
                 <h3>Twitter Buzz</h3>
                 <div class="bucket">
@@ -130,20 +132,20 @@ h3 { text-transform: uppercase; font-size: 100%; padding: 0 10px; margin: 0 0 -5
             </div>
         </section>
 
-        <section id="footer">
-            <div id="extra" class="grid_4 alpha">
-            </div>
-            <div id="partner-callout" class="grid_8 omega">
+        <section id="footer" class="grid_12">
+            <!--<div id="extra" class="grid_4 alpha">
+            </div>-->
+            <div id="partner-callout" class="grid_12 alpha omega">
                 <h3>Estamos precisando de apoiadores!</h3>
                 <p class="bucket">
                     Temos o conceito, a cara e a coragem, agora precisamos de apoio, experiência e estrutura.
-                    Se você gostaria de apoiar esta idéia, como patrocinador, parceiro, ou mentor, nós temos muito interesse em falar a respeito.
+                    Se você gostaria de apoiar esta idéia, como patrocinador, parceiro, ou mentor, nós temos muito interesse em falar a respeito.<br />
                     <a href="http://blog.desconf.org/o-que-e-a-desconf">Saiba mais sobre o que é a @desconf</a>, 
                     <a href="http://blog.desconf.org/pages/quem-e">conheça quem está por trás dessa idéia</a> 
                     e <a href="mailto:contato@desconf.org">entre em contato!</a>
                 </p> 
             </div>
-            <div class="grid_12">           
+            <div class="grid_12 alpha omega">
                 <small>
                     blog: <a href="http://blog.desconf.org">blog.desconf.com</a> |
                     twitter: <a href="http://twitter.com/desconf">@desconf</a> |
