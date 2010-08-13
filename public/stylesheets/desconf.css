@@ -15,6 +15,6 @@ strong { font-size: 110%; }
 #social { margin: 0 0 0 0; }
 #social small { font-size: 70%; }
 #social iframe { margin-bottom: -5px; }
-section { clear: both; float: left; }
+section { clear: both; float: left; width: 100%; }
 #teaser { font-size: 80%; line-height: 125%; text-align: left; padding: 28px 0 0 0; }
 #logo { float: left; margin-right: 20px } 
