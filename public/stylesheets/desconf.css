@@ -1,11 +1,9 @@
 @charset "UTF-8";
 
-body { background-color: #8b6250; font-family: Arial, sans-serif; font-size: 130%; color: white; text-align: center; margin: 0; }
-#footer { position: relative; }
-#footer small { font-size: 70%; }
+body { background-color: #8b6250; font-family: Helvetica, "Trebuchet MS", sans-serif; font-size: 130%; color: white; text-align: center; margin: 0; }
+
 a:link, a:visited { color: #b9ff33; }
 strong { font-size: 110%; }
-#wrapper { width: 500px; margin: 0 auto; }
 #info { border-bottom: 4px solid #a7d74c; border-top: 4px solid #a7d74c; padding: 10px; margin: 0 0 10px 0; font-size: 98%; }
 #info strong a { color: #fff; text-decoration: none; border-bottom: 1px dotted #fff; }
 #info strong a:hover { color: #b9ff33; border-color: #b9ff33; }
@@ -15,6 +13,26 @@ strong { font-size: 110%; }
 #social { margin: 0 0 0 0; }
 #social small { font-size: 70%; }
 #social iframe { margin-bottom: -5px; }
-section { clear: both; float: left; width: 100%; }
-#teaser { font-size: 80%; line-height: 125%; text-align: left; padding: 28px 0 0 0; }
-#logo { float: left; margin-right: 20px } 
+section, header { clear: both; float: left; width: 100%; }
+
+
+/* Desconf2 */
+
+/* image replacement */
+.img { background-repeat: no-repeat; background-position: 0 0; }
+.img * { text-indent: -1000; font-size: 1px; visibility: hidden; }
+
+/* header */
+header { height: 292px; padding-top: 30px; background: url(i/header-bg.jpg) repeat-x 0 bottom; }
+#logo { background-image: url(i/header-desconf-logo.jpg); height: 252px; /* fix for bad grid usage :( */ width: 350px; margin-right: 0; }
+#top-teaser { background-image: url(i/header-top-teaser.jpg); height: 252px; }
+
+/* desconf-info */
+#desconf-info { background-color: #eaeaea; height: 354px; }
+#desconf-info .info { padding: 15px 0; }
+#desconf-info li { height: 285px; }
+#desconf-quando { background-image: url(i/desconf-info-quando.jpg); margin-left: -5px; margin-right: 25px; width: 235px; }
+#desconf-onde { background-image: url(i/desconf-info-onde.jpg); width: 235px; }
+#desconf-oque li { height: auto; text-align: right; list-style: none; color: #a03d3d; }
+#desconf-oque li strong { font-size: 34px; color: #d64848; }
+#desconf-oque .big-num { font-size: 42px; }

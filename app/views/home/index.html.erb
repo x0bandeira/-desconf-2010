@@ -7,12 +7,57 @@
 <!--[if lte IE 8]>
 <script src="html5.js" type="text/javascript"></script>
 <![endif]-->
+<link href="stylesheets/grid.css" type="text/css" rel="stylesheet"></link>
 <link href="stylesheets/desconf.css" type="text/css" rel="stylesheet"></link>
+
+<script type="text/javascript"> var gOverride = { gColumns: 16, size: 960 }; </script>
 
 </head>
 
 <body>
-    <div id="wrapper">
+
+    <header>
+        <div class="container_16">
+            <div class="push_1 grid_14">
+                <div id="logo" class="img grid_6 alpha">
+                    <strong>Desconferência Rápida</strong>
+                </div>
+                <div id="top-teaser" class="img push_1 grid_8 omega">
+                    <em>Empreendedorismo, Web,
+                    Design, Desenvolvimento...
+                    e 5 minutos</em>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="desconf-info">
+        <div class="container_16">
+            <ul class="info push_1 grid_14">
+                <li id="desconf-quando" class="img grid_4 alpha">
+                    <p><b>Quando?</b> Dia 20 de Novembro</p>
+                </li>
+                <li id="desconf-onde" class="img grid_4">
+                    <p><b>Onde?</b> Porto Alegre</p>
+                </li>
+                <li id="desconf-oque" class="grid_5 omega">
+                    <ul>
+                        <li><strong class="big-num">5</strong> horas</li>
+                        <li><strong class="big-num">50</strong> cabeças</li>
+                        <li>Todos trocando <strong>idéias</strong></li>
+                        <li>Todos dividindo <strong>experiências</strong></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="info push_1 grid_14">
+            <div id="desconf-cronograma">
+                <h2>Cronograma Desconferência Rápida:</h2>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="wrapper" style="display:none;">
         <img src="/images/desconf-original.png" id="logo" width="240" />
         <div id="teaser">
             Empreendedorismo, Web, Design, Lean, Usabilidade, Carreira,
