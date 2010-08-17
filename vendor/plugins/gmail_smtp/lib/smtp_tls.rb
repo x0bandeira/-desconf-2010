@@ -25,7 +25,7 @@ Net::SMTP.class_eval do
 		@socket.debug_output = STDERR #@debug_output
 		do_helo(helodomain)
 
-		authenticate user, secret, authtype if user
+		authenticate user, secret if user
 		@started = true
 	ensure
 		unless @started
