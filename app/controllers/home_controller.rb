@@ -3,7 +3,9 @@ class HomeController < ApplicationController
   end
   
   def registrar
-    Notificador.deliver_registro_interesse(request.request_parameters()['email'])
+    @subscription = Subscription.new
+    @subscription.email = request.request_parameters()['email']
+    @subscription.save
     render 'index'
   end
 
