@@ -7,55 +7,104 @@
 <!--[if lte IE 8]>
 <script src="html5.js" type="text/javascript"></script>
 <![endif]-->
+<link href="stylesheets/grid.css" type="text/css" rel="stylesheet"></link>
 <link href="stylesheets/desconf.css" type="text/css" rel="stylesheet"></link>
 
+<script type="text/javascript"> var gOverride = { gColumns: 16, size: 960 }; </script>
+<script type="text/javascript">
+    if (window.location.pathname == '/registrar') alert("Obrigado pelo seu interesse! \nEntraremos em contato quando tivermos mais informações!");
+</script>
 </head>
 
 <body>
-    <div id="wrapper">
-        <img src="/images/desconf-original.png" id="logo" width="240" />
-        <div id="teaser">
-            Empreendedorismo, Web, Design, Lean, Usabilidade, Carreira,
-            Ruby, Social Media, Acessibilidade, Produtos, Scrum, Idéias, 
-            Python, Cores, Liderança, PHP, <br />XP, User Experience,
-            <br />Open Source, E-Commerce<br /><strong>... e 5 minutos</strong>.
+
+    <header>
+        <div class="container_16">
+            <div class="push_1 grid_14">
+                <div id="logo" class="img grid_6 alpha">
+                    <strong>Desconferência Rápida</strong>
+                </div>
+                <div id="top-teaser" class="img push_1 grid_8 omega">
+                    <em>Empreendedorismo, Web,
+                    Design, Desenvolvimento...
+                    e 5 minutos</em>
+                </div>
+            </div>
         </div>
-        <section>
-            <div id="info">
-                Um dia de final de semana, algumas horas, só de 
-                <strong><a target="_blank" href="http://blog.desconf.org/introducao-rapida-a-lightning-talks">Lightning Talks</a></strong> e 
-                <strong><a target="_blank" href="http://blog.desconf.org/dojo-o-que-porque-e-como">Dojos</a></strong>,
-                com umas 50 pessoas, todos auto-organizados, participando com o intuito
-                de dividir conhecimento e compartilhar experiências.
-                <br /><a id="learnmore" href="http://blog.desconf.org/o-que-e-a-desconf">SAIBA MAIS!</a>
+    </header>
+    <section id="desconf-info">
+        <div style="background-color: #eaeaea;">
+            <div class="container_16">
+                <ul class="info push_1 grid_14">
+                    <li id="desconf-quando" class="img grid_4 alpha">
+                        <p><b>Quando?</b> Dia 20 de Novembro</p>
+                    </li>
+                    <li id="desconf-onde" class="img grid_4">
+                        <p><b>Onde?</b> Porto Alegre</p>
+                    </li>
+                    <li id="desconf-oque" class="grid_5 omega">
+                        <p>Um dia de <strong>final de semana</strong>, <br />algumas horas, <br />só de <a href="http://blog.desconf.org/dojo-o-que-porque-e-como" target="_blank">Dojos</a> <br />e <a href="http://blog.desconf.org/introducao-rapida-a-lightning-talks" target="_blank">Lightning Talks</a>, <br />umas <strong>50 cabeças</strong> reunidas, <br />dividindo <strong>conhecimento</strong> <br />e trocando <strong>experiências</strong>. </p>
+                    </li>
+                </ul>
+                <div class="clear"></div>
             </div>
-            <div id="social">
-                <small>Ajude a <a href="http://twitter.com/desconf"><small>@</small>desconf</a> acontecer divulgando o evento no Twitter!</small>
-                <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://desconf.org" data-text="Desconferência Rápida? Eu apoio! #desconf" data-count="horizontal">Tweet</a>
+        </div>
+        <div id="info2">
+            <div id="desconf-como" class="container_16">
+                <h2 class="img grid_12 push_3"><a name="desconf-cronograma"></a><span>Cronograma Desconferência Rápida:</span></h2>
+                <ul id="desconf-cronograma" class="img grid_12 push_3">
+                
+                    <li>
+                        Lightning Talks <em>Todos falam 5 minutos</em>
+                    </li>
+                    <li>
+                        Design Dojo  e Coding Dojo
+                        <em>No Coffee Break</em> 
+                    </li>
+                    <li>
+                        Lightning Talks <em>Não falou ainda? Vai falar agora!</em>
+                    </li>
+                    <li>
+                        Bar e Ceva <em>Trocar ideia no bar, não podia faltar</em>
+                    </li>
+                
+                </ul>
+                <div class="clear"></div>
             </div>
+            <div id="desconf-registro">
+                <div class="container_16">
+                    <h2 class="img grid_2 push_1">Registre seu interesse</h2>
+                    <form action="/registrar" method="post">
+                        <div id="form-background">
+                            
+                            <label for="email-input">Seu e-mail aqui:</label>
+                            <input onfocus="if (this.value == '_') this.value = '';" onblur="if (this.value == '') this.value = '_';" id="email-input" value="_" name="email" type="text" />
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+                            <input class="submit" value="&raquo;" type="submit" />
+                        </div>
+                    </form>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer style="float: left; width: 100%; clear: both; padding: 30px 0 15px 0; font-size: 18px;">
+        <div id="social">
+            <small>Curtiu? Mostre seu apoio retuitando a <a href="http://twitter.com/search?q=desconf"><small>#</small>desconf</a>!</small>
+            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://desconf.org" data-text="Desconferência Rápida? Eu apoio! #desconf" data-count="horizontal">Tweet</a>
+        </div>
 
-        </section>
+        <small>
+            blog: <a href="http://blog.desconf.org">blog.desconf.com</a> |
+            twitter: <a href="http://twitter.com/desconf">@desconf</a> |
+            e-mail: <a href="mailto:contato@desconf.org">contato at desconf.org</a>
+            <br />
+            desconf.org | nenhum direito reservado.
+        </small>
+    </footer>
 
-        <section id="footer">
-            <h2 class="callout">
-                Estamos precisando de apoiadores!
-            </h2>
-            <p class="callout-info">
-                Temos o conceito, a cara e a coragem, agora precisamos de apoio, experiência e estrutura.
-                Se você gostaria de apoiar esta idéia, como patrocinador, parceiro, ou mentor, nós temos muito interesse em falar a respeito. <br />
-                <a href="http://blog.desconf.org/o-que-e-a-desconf">Saiba mais sobre o que é a @desconf</a>, 
-                <a href="http://blog.desconf.org/pages/quem-e">conheça quem está por trás dessa idéia</a> 
-                e <a href="mailto:contato@desconf.org">entre em contato!</a>
-            </p>            
-            <small>
-                blog: <a href="http://blog.desconf.org">blog.desconf.com</a> |
-                twitter: <a href="http://twitter.com/desconf">@desconf</a> |
-                e-mail: <a href="mailto:contato@desconf.org">contato at desconf.org</a>
-                <br />
-                desconf.org | Nenhum direito reservado.
-            </small>
-        </section>
-    </div>
+
+
 
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 <script type="text/javascript">
