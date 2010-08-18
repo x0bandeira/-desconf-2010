@@ -74,7 +74,7 @@
             <div id="desconf-registro">
                 <div class="container_16">
                     <h2 class="img grid_2 push_1">Registre seu interesse</h2>
-                    <form action="/registrar" method="post">
+                    <form action="/registrar" method="post" onsubmit="return validaemail()">
                         <div id="form-background">
                             
                             <label for="email-input">Seu e-mail aqui:</label>
@@ -105,7 +105,18 @@
 
 
 
-
+<script type="text/javascript">
+function validaemail() {
+    var emailInput = document.getElementById('email-input'),
+        emailCheck = /.*@.*/;
+    
+    if (emailCheck.test(emailInput.value)) return true;
+    else {
+        alert('Por favor, passe seu e-mail para registrar interesse!');
+        return false;
+    }
+}
+</script>
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 <script type="text/javascript">
   var _gaq = _gaq || [];
