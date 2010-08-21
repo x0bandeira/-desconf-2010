@@ -97,7 +97,46 @@
     </section>
     <section id="desconf-social">
         <div class="container_16">
-            <div class="push_8 grid_7" id="desconf-blog">
+            <div class="push_1 grid_7 bucket">
+                <h2>Twitter Buzz</h2>
+                <div id="twitter-entries">
+                <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'desconf',
+  interval: 8000,
+  title: '',
+  subject: '',
+  width: 'auto',
+  height: 235,
+  theme: {
+    shell: {
+      background: '#eaeaea',
+      color: '#eaeaea'
+    },
+    tweets: {
+      background: '#eaeaea',
+      color: '#333333',
+      links: '#d64848'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
+                </div>
+            </div>
+            <div class="push_1 grid_7 bucket" id="desconf-blog">
                 <h2>Rolando No Blog</h2>
                 <div id="blog-entries">
                     Carregando...
@@ -106,6 +145,7 @@
                     <a href="http://blog.desconf.org">quero ver +</a>
                 </div>
             </div>
+            <div class="clear"></div>
         </div>
     </section>
     <footer style="float: left; width: 100%; clear: both; padding: 30px 0 15px 0; font-size: 18px; text-align: left;">

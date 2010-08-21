@@ -59,12 +59,18 @@ header { height: 292px; padding-top: 30px; background: url(i/header-bg.jpg) repe
 
 /* desconf-social */
 #desconf-social { padding: 80px 0 0 0; text-align: left; }
-#desconf-blog { background: #eaeaea; color: #333; font-size: 14px; -webkit-border-radius: 3px; -webkit-box-shadow: #aaa 1px 1px 1px; }
-#desconf-blog h2 { margin: -19px 10px 0 0; padding: 0; color: #eaeaea; text-transform: uppercase; text-align: right; text-shadow: #aaa 1px 0 1px; }
-#desconf-blog .viewmore { text-align: right; padding: 0 0 10px; }
+#desconf-blog .viewmore { text-align: right; padding: 0 0 10px; position: absolute; right: 0; bottom: 0; }
 #desconf-blog .viewmore a { color: #fff; background-color: #d64848; padding: 2px 12px 2px 4px; text-transform: uppercase; font-weight: bold; text-decoration: none; }
 #blog-entries a { color: #d64848; text-decoration: none; }
 #blog-entries a:hover { border-bottom: 1px dotted #d64848; }
 #blog-entries { padding: 0 10px 10px; }
-#blog-entries .entry { border-bottom: 1px #fff solid; padding: 10px 0; }
+#blog-entries .entry { border-bottom: 1px dotted #DDD; padding: 10px 0; }
 #blog-entries .entry .date { color: #aaa; padding: 0 5px; }
+#blog-entries .title { font-size: 14px; }
+
+.bucket { background: #eaeaea; color: #333; font-size: 12px; -webkit-border-radius: 3px; -webkit-box-shadow: #aaa 1px 1px 1px; -moz-border-radius: 3px; -moz-box-shadow: #aaa 1px 1px 1px; height: 295px; }
+.bucket h2 { margin: -18px 10px 0 0; padding: 0; color: #eaeaea; text-transform: uppercase; text-align: right; text-shadow: #aaa 1px 0 1px; }
+
+#twitter-entries { padding: 0 5px }
+#desconf-social .twtr-widget { margin-top: -12px; }
+#desconf-social #twtr-widget-1 .twtr-doc { background: transparent !important; }
