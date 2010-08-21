@@ -51,3 +51,6 @@ header { height: 292px; padding-top: 30px; background: url(i/header-bg.jpg) repe
 #email-input { width: 445px; height: 32px; line-height: 32px; font-weight: bold; text-transform: lowercase; font-size: 30px; }
 #desconf-registro .submit { font-size: 38px; line-height: 20px; font-weight: bold;  cursor: pointer; }
 #desconf-registro .submit:hover { background: #fff; -moz-border-radius: 10px; -webkit-border-radius: 30px; }
+
+#callout { width: 100%; font-size: 14px; padding: 5px; background-color: #d64848; border-bottom: 2px solid #a03d3d; }
+#callout a { color: #FFFC9F; }
