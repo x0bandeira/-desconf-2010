@@ -41,7 +41,7 @@ header { height: 292px; padding-top: 30px; background: url(i/header-bg.jpg) repe
 #info2 { background: url(i/desconf-info2-bg.jpg) repeat-x -15px 0; margin-top: -3px; }
 #desconf-como { padding-top: 30px; }
 #desconf-como h2 { background-image: url(i/cronograma-header.png); margin-top: 0; margin-bottom: 20px; height: 28px; margin-left: 30px; }
-#info2 #desconf-cronograma { background-image: url(i/cronograma.png); height: 211px; margin-left: 40px; }
+#info2 #desconf-cronograma { background: url(i/cronograma.png) no-repeat 0 -2px; height: 211px; margin-left: 40px; }
 
 #desconf-registro h2 { background-image: url(i/registre-seu-interesse.png); background-position: -1px 0; width: 123px; height: 381px; margin-top: -285px; margin-left: 10px; }
 #desconf-registro form { float: left; width: 100%; margin-top: -52px; clear: both; height: 74px; background: #000 url(i/emailbar_17.jpg); }
