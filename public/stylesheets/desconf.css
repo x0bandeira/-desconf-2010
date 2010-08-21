@@ -44,7 +44,7 @@ header { height: 292px; padding-top: 30px; background: url(i/header-bg.jpg) repe
 #info2 #desconf-cronograma { background: url(i/cronograma.png) no-repeat 0 -2px; height: 211px; margin-left: 40px; }
 
 #desconf-registro h2 { background-image: url(i/registre-seu-interesse.png); background-position: -1px 0; width: 123px; height: 381px; margin-top: -285px; margin-left: 10px; }
-#desconf-registro form { float: left; width: 100%; margin-top: -52px; clear: both; height: 74px; background: #000 url(i/emailbar_17.jpg); }
+#desconf-registro form { float: left; width: 100%; margin-top: -52px; clear: both; height: 74px; background: #000 url(i/emailbar-17.png); }
 #desconf-registro form div { margin: 15px 0 0 175px; float: left; }
 #desconf-registro input { background: transparent; border: none; color: #c0e52e;  }
 #desconf-registro label { text-transform: lowercase; font-size: 38px; }
