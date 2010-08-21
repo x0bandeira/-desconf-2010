@@ -54,5 +54,17 @@ header { height: 292px; padding-top: 30px; background: url(i/header-bg.jpg) repe
 #desconf-registro .submit:hover { background: #fff; -moz-border-radius: 10px; -webkit-border-radius: 30px; }
 
 /* callout */
-#callout { width: 100%; font-size: 14px; padding: 5px; background-color: #d64848; border-bottom: 2px solid #a03d3d; }
+#callout { width: 100%; font-size: 14px; padding: 5px 0; background-color: #d64848; border-bottom: 2px solid #a03d3d; }
 #callout a { color: #FFFC9F; }
+
+/* desconf-social */
+#desconf-social { padding: 80px 0 0 0; text-align: left; }
+#desconf-blog { background: #eaeaea; color: #333; font-size: 14px; -webkit-border-radius: 3px; -webkit-box-shadow: #aaa 1px 1px 1px; }
+#desconf-blog h2 { margin: -19px 10px 0 0; padding: 0; color: #eaeaea; text-transform: uppercase; text-align: right; text-shadow: #aaa 1px 0 1px; }
+#desconf-blog .viewmore { text-align: right; padding: 0 0 10px; }
+#desconf-blog .viewmore a { color: #fff; background-color: #d64848; padding: 2px 12px 2px 4px; text-transform: uppercase; font-weight: bold; text-decoration: none; }
+#blog-entries a { color: #d64848; text-decoration: none; }
+#blog-entries a:hover { border-bottom: 1px dotted #d64848; }
+#blog-entries { padding: 0 10px 10px; }
+#blog-entries .entry { border-bottom: 1px #fff solid; padding: 10px 0; }
+#blog-entries .entry .date { color: #aaa; padding: 0 5px; }

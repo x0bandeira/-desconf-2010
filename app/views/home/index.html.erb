@@ -95,24 +95,67 @@
             </div>
         </div>
     </section>
-    <footer style="float: left; width: 100%; clear: both; padding: 30px 0 15px 0; font-size: 18px;">
-        <div id="social">
-            <small>Curtiu? Mostre seu apoio retuitando a <a href="http://twitter.com/search?q=desconf"><small>#</small>desconf</a>!</small>
-            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://desconf.org" data-text="Desconferência Rápida? Eu apoio! #desconf" data-count="horizontal">Tweet</a>
+    <section id="desconf-social">
+        <div class="container_16">
+            <div class="push_8 grid_7" id="desconf-blog">
+                <h2>Rolando No Blog</h2>
+                <div id="blog-entries">
+                    Carregando...
+                </div>
+                <div class="viewmore">
+                    <a href="http://blog.desconf.org">quero ver +</a>
+                </div>
+            </div>
         </div>
+    </section>
+    <footer style="float: left; width: 100%; clear: both; padding: 30px 0 15px 0; font-size: 18px; text-align: left;">
+        <div class="container_16">
+            <div class="push_1 grid_14">
+                <div id="social">
+                    <small>Curtiu? Mostre seu apoio retuitando a <a href="http://twitter.com/search?q=desconf"><small>#</small>desconf</a>!</small>
+                    <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://desconf.org" data-text="Desconferência Rápida? Eu apoio! #desconf" data-count="horizontal">Tweet</a>
+                </div>
 
-        <small>
-            blog: <a href="http://blog.desconf.org">blog.desconf.com</a> |
-            twitter: <a href="http://twitter.com/desconf">@desconf</a> |
-            e-mail: <a href="mailto:contato@desconf.org">contato at desconf.org</a>
-            <br />
-            desconf.org | nenhum direito reservado.
-        </small>
+                <small>
+                    blog: <a href="http://blog.desconf.org">blog.desconf.com</a> |
+                    twitter: <a href="http://twitter.com/desconf">@desconf</a> |
+                    e-mail: <a href="mailto:contato@desconf.org">contato at desconf.org</a>
+                    <br />
+                    desconf.org | nenhum direito reservado.
+                </small>
+            </div>
+        </div>
     </footer>
 
 
-
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAUdXm0aqEdOrIJilGr5l1cBQC1Vvux10eV0JNt-e-IY8DvborkBR4MHdPSkRH8SVm8Qyo-3DJqzHIOA"></script>
 <script type="text/javascript">
+google.load('feeds', '1');
+google.setOnLoadCallback(function() {
+
+    var blogFeeds = new google.feeds.Feed('http://blog.desconf.org/rss.xml')
+        entriesWrapper = document.getElementById('blog-entries'),
+        entriesToShow = 3, displayHTML = '', entryDate = null;
+
+    blogFeeds.load(function(result) {
+        if (result.error) return;
+        
+        for (var i = 0; i < entriesToShow; i++) {
+            entryDate = new Date(result.feed.entries[i].publishedDate);
+
+            displayHTML += 
+                "<div class='entry'><strong><a class='title' href='%link%'>%title%</a><span class='date'>%date%</span></strong><div>%content%</div></div>"
+                    .replace(/\%link\%/g, result.feed.entries[i].link)
+                    .replace(/\%title\%/g, result.feed.entries[i].title)
+                    .replace(/\%content\%/g, result.feed.entries[i].contentSnippet)
+                    .replace(/\%date\%/g, entryDate.getDate() + '/' + (entryDate.getMonth() + 1)  );
+        }
+        entriesWrapper.innerHTML = displayHTML;
+    });
+
+});
+
+
 function validaemail() {
     var emailInput = document.getElementById('email-input'),
         emailCheck = /.*@.*/;
