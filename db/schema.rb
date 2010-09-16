@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100817052313) do
+ActiveRecord::Schema.define(:version => 20100916100650) do
+
+  create_table "speakers", :force => true do |t|
+    t.string   "name"
+    t.string   "twitter"
+    t.string   "email"
+    t.date     "created_at"
+    t.text     "tags"
+    t.datetime "updated_at"
+    t.string   "confirmation_status"
+  end
 
   create_table "subscriptions", :force => true do |t|
     t.text     "email"
